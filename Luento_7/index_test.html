@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        div, header, main, footer {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .container{
+            padding:0;
+            width: 960px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: aquamarine;
+            text-align: center;
+        }
+        .side1, .side2 {
+            width: 25%;
+            float:left;
+            background-color: blueviolet;
+            color: white;
+        } 
+        main {
+            width: 50%;
+            float:left;
+            background-color: white;
+        }
+        .clearfloat {
+            clear: both;
+        }
+        footer {
+            background-color: beige;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 960px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .side1, .side2, main {
+                width: 100%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <div class="side1">
+            <h3>Sidebar1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis ut odio fugiat vitae magnam, dolores perferendis ipsa dolorum error nemo sed sint, laudantium aperiam atque pariatur sapiente molestias quidem dolor!</p>
+        </div>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor ipsam eaque amet ipsa maxime aliquid officiis rerum enim commodi nihil sint sit alias asperiores, aperiam facere aspernatur nobis fuga. Quam!</p>
+                <img src="./images/cat.jpg" alt="Kitten">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor ipsam eaque amet ipsa maxime aliquid officiis rerum enim commodi nihil sint sit alias asperiores, aperiam facere aspernatur nobis fuga. Quam!</p>
+        </main>
+
+        <div class="side2">
+            <h3>Sidebar2</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aut commodi dolore repudiandae veniam possimus, quas facere animi odit? Doloremque deserunt sapiente id modi beatae architecto illo eius fugiat molestiae.</p>
+        </div>
+        <br class="clearfloat">
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>
