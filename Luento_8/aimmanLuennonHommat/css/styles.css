@@ -23,6 +23,7 @@ h4 {
 body  {
 	font: 100% Georgia, "Times New Roman", Times, serif;
 	background: #1a1b52;
+
 	margin: 0; 
 	padding: 0;
 	color: #000000;
@@ -49,6 +50,7 @@ body  {
 	background-image: linear-gradient(#ffcc08, #ffad00 258px);
 	float:left;
 	width: 100%;
+	
 }
 #header li {
 	float:left;
@@ -72,6 +74,7 @@ body  {
 
 .living #living  a, .business #business a, .chamber #chamber a {
 	color: #1a1b52;
+	font-weight: bold;
 }
 
 

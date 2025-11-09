@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 3 palstaa</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div {
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    .grid-container {
+        display: grid;
+        /* This code defines a grid layout with three columns: a narrow left sidebar, a wide main content area, and a narrow right sidebar. 
+        1 fraction unit (fr) for the left sidebar,
+        3 fraction units (fr) for the main content area,
+        1 fraction unit (fr) for the right sidebar. */
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav main right"
+            "footer footer footer";
+        padding: 10px;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+
+    .item1 {
+        grid-area: header;
+    }
+
+    .item2 {
+        grid-area: nav;
+    }
+
+    .item3 {
+        grid-area: main;
+    }
+
+    .item4 {
+        grid-area: right;
+    }
+
+    .item5 {
+        grid-area: footer;
+    }
+
+    /* All go to single column on small screens */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "main"
+                "nav"
+                "right"
+                "footer";
+        }
+    }
+</style>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">Header</div>
+        <div class="grid-item item2">sidebar-left</div>
+        <div class="grid-item item3">main <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus
+                architecto qui deleniti quo aliquam nostrum nulla illum voluptatem eveniet aut non itaque adipisci nisi
+                incidunt et repellat laboriosam aspernatur sed temporibus, quos cumque reprehenderit quis minus.
+                Accusamus recusandae, ipsam aspernatur non nemo nam deserunt voluptates exercitationem voluptate
+                accusantium autem ut libero iure odit laborum labore blanditiis, quis at quia! Id quos voluptates
+                itaque! Quis, veritatis? Libero, hic nulla? Nulla doloremque, repellat doloribus rem facere tenetur
+                facilis ipsa nisi dolores! Earum, sapiente? Pariatur perferendis quidem ab! Dolores vel explicabo rem
+                dolorum, perspiciatis nobis iste exercitationem earum consectetur in non rerum est dolorem blanditiis,
+                eveniet quam reprehenderit corporis quibusdam? Explicabo deserunt rem unde officiis, reprehenderit nulla
+                voluptate ducimus qui dicta commodi tempora iusto debitis, est cumque et dolore? Maxime nostrum
+                temporibus expedita natus nemo vel ut impedit tenetur sequi minus nisi ullam, culpa autem incidunt
+                tempore. A ex dignissimos quos rerum!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugiat ea impedit quae non tempora
+                pariatur? Tempora explicabo vel adipisci reiciendis laboriosam repudiandae, culpa odit optio, aperiam
+                necessitatibus aliquid quia exercitationem eaque sed neque provident voluptatum minima praesentium
+                suscipit officiis modi maxime blanditiis odio itaque. Reprehenderit pariatur esse labore exercitationem.
+            </p>
+        </div>
+
+        <div class="grid-item item4">sidebar-right</div>
+        <div class="grid-item item5">footer</div>
+    </div>
+
+</body>
+
+</html>

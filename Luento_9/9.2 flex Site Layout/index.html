@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 palstan taitto flex</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            flex: 0;
+            background-color: #77216F;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+            width: 10%;
+            background-color: #bc3456;
+        }
+
+        .content {
+            flex: 1;
+            background-color: #ffffff;
+        }
+
+        .footer {
+            flex: 0;
+            background-color: #77216F;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1 class="header">Header</h1>
+        </div>
+
+        <div class="main">
+            <div class="sidebar-left">Left Sidebar</div>
+            <div class="content">Main Content
+                <p>This is the main content area.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit voluptatibus laudantium hic neque
+                    impedit deserunt aperiam dignissimos? Delectus, minima dignissimos. Minima placeat corrupti, iusto
+                    iste cumque perferendis odit enim dolores magnam, eaque in optio tempore officia ea numquam sapiente
+                    ducimus dolor dolore, maiores cum officiis. Fugit nihil excepturi, voluptatibus obcaecati
+                    consequatur sit optio consequuntur cumque dignissimos ipsum praesentium laudantium distinctio eum
+                    quia in illum a voluptatum ullam ratione! Vero nobis aspernatur, culpa blanditiis, dolorum natus
+                    pariatur accusamus libero provident repudiandae exercitationem a, delectus rerum aliquam temporibus
+                    tempore ipsum alias est quam non minus sit? Temporibus nemo hic numquam perspiciatis ipsum earum
+                    inventore nihil? Nihil ex iste minima odio impedit culpa sapiente distinctio mollitia ut deserunt
+                    illo eos dolorum neque, explicabo cum at adipisci, vitae a natus laboriosam autem earum ratione.
+                    Reiciendis, officia? Quaerat nobis doloremque ex eum quos nostrum, at vero a cumque, asperiores
+                    autem maiores error nam molestias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+                    et, libero animi enim soluta ipsa,
+                    itaque dolorum porro, blanditiis optio consequuntur natus tenetur iste minus. Culpa maxime iste
+                    tenetur labore! </p>
+            </div>
+            <div class="sidebar-right">Right Sidebar</div>
+        </div>
+
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
