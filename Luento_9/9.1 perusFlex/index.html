@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #77216F;
+        }
+
+        div {
+            /* display: flex;
+            flex-wrap: wrap;
+            width: 300px; */
+            border: 1px solid #000;
+            color: #FFF;
+        }
+
+        .container {
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex-direction: row;
+
+            height: 100vh;
+        }
+
+        .flex-item {
+            width: 70px;
+            height: 70px;
+            background-color: #bc3456;
+            text-align: center;
+            line-height: 70px;
+
+        }
+
+        /*order järjestää elementtien järjestyksen flexboxissa, toimii samoin
+        kuin z-index, mutta on kuin x-index tai y-index oletus on 0*/
+
+        .item-1 {
+            order: 0
+        }
+
+        .item-2 {
+            order: 1
+        }
+
+        .item-3 {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+        <div class="flex-item item-3">3</div>
+        <div class="flex-item item-4">4</div>
+        <div class="flex-item item-5">5</div>
+        <!-- <div class="flex-item item-6">6</div>
+        <div class="flex-item item-7">7</div> -->
+    </div>
+</body>
+
+</html>
+<!-- <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+        <div class="flex-item item-3">3</div>
+        <div class="flex-item item-4">4</div>
+        <div class="flex-item item-5">5</div>
+        <div class="flex-item item-6">6</div>
+        <div class="flex-item item-7">7</div> -->

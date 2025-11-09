@@ -74,6 +74,7 @@ body  {
 
 .living #living  a, .business #business a, .chamber #chamber a {
 	color: #1a1b52;
+	font-weight: bold;
 }
 
 
