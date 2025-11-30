@@ -94,7 +94,7 @@ background: #403E8A url(../images/main_back.jpg) repeat-x;
 #sidebar1 {
 	float: left;
 	width: 23%; 
-	padding: 15px 0; 
+	/* padding: 15px 0;  */
 	background: url(../images/side1_back.jpg) no-repeat right top;
 	min-height: 200px;
 }
@@ -127,7 +127,7 @@ padding: 5px 0px 5px 40px;
 .living #visiting a, .moving #moving a, .maplocator #maplocator a,
 .directory #directory a{
 background: url(../images/arrow.gif) no-repeat left center;
-color: #FF9F00;
+color: #FF9111;
 }
 #sidebar2 {
 	float: right; 
