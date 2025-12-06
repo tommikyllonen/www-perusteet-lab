@@ -1,0 +1,148 @@
+.item{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-1{
+    transform: translate(15px, 15px);
+}
+.item-2{
+    transform: translateX(15px);
+}
+.item-3{
+    transform: translateY(-45px);
+}
+.item-4{
+    transform: rotate(45deg);
+}
+.item-5{
+    transform: rotateY(45deg);
+    /* transform: rotateX(45deg); */
+    /* transform: rotateZ(45deg); */
+}
+.item-6{
+    transform: skew(16deg, 10deg);
+    /* transform: skewX(20deg) */
+    /* transform: skewY(20deg) */
+}
+.item-7{
+    transform: scale(0.75);
+}
+.item-8{
+    transform: rotate(10deg) scale(1.25);
+}
+.item-9{
+    background-color:red;
+    /* eka aika on kesto toka on delay after which it starts */
+    /* ease-in = slow start, fast end */
+    transition:  background-color 1s,height 1.5s 1s ease-in;
+
+}
+.item-9:hover{
+    background-color:bisque;
+    height: 200px;
+}
+.item-10{
+    transform: rotate(0deg) scale(1);
+    
+}
+.item-10:hover{
+    transform: rotate(20deg) scale(1);
+    transition: all 0.9 s;
+}
+.item-11{
+}
+.item-12{}
+
+
+
+.container2{
+    height: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.image-container{
+    width: 250px;
+}
+.image-container h3{
+    text-align: center;
+    padding: 25px 0;
+    border: 1px solid black;
+}
+.img{
+    margin-top: 0;
+    height: 0;
+    background-size: cover;
+    transition: height 0.5s;
+    z-index: 30;
+}
+
+.imgML{
+    background-image: url("../images/mona-lisa.jpeg");
+}
+.imgMO{
+    background-image: url("../images/monkey.jpeg");
+}
+.imgTeemu{
+    background-image: url("../images/teemu.jpeg");
+}
+h3:hover + .imgMO, 
+h3:hover + .imgML, 
+h3:hover + .imgTeemu{
+    height: 250px;
+
+}
+.testi{
+    border: 2px solid red;
+    height: 100px;
+ }
+
+
+ .container3{
+    height:500px;
+    border: 2px solid blue;
+ }
+/* learn more: https://www.w3schools.com/css/css3_animations.asp */
+ .ball{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: bounceBalloon 3s ease-in-out 0.5s infinite alternate;
+ }
+.ball2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+    position: relative;
+    animation: bounceBalloonReverse 3s ease-in-out 0.5s infinite alternate;
+}
+ @keyframes bounceBalloon {
+  from {transform: translateY(0);}
+  to {transform: translateY(400px);}
+}
+@keyframes bounceBalloonReverse {
+  0% {
+    opacity:1;
+    transform: translateY(300px);
+  }
+  50% {
+    opacity:0.5;
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(-100px);
+}
+}
