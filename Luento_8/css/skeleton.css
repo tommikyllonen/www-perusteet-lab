@@ -626,10 +626,8 @@ p,
 }
 
 #mainContent {
-  /* margin: 0 24% 0 23.5%; */
   padding-top: 10px;
   padding-left: 10px;
-  /* padding-right: 10px;  */
 
 }
 
@@ -678,8 +676,8 @@ p,
 #header li {
   float: left;
   font-size: 110%;
-  width: 100%; 
-  overflow:hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 #header li a {
@@ -706,13 +704,8 @@ p,
   font-weight: bold;
 }
 
-/* .living #visiting a, .moving #moving a, .maplocator #maplocator a,
-.directory #directory a{
-background: url(../images/arrow.gif) no-repeat left center;
-} */
 
 #mainWrap {
-  /* background-image: linear-gradient(#6e6ea4, #403d8a); */
   background: #403E8A url(../images/main_back.jpg) repeat-x;
   padding-bottom: 20px;
   border-bottom: 10px solid #36357D;
@@ -720,12 +713,8 @@ background: url(../images/arrow.gif) no-repeat left center;
 
 #sidebar1 {
   padding: 15px;
-  /* padding-right: 35px; */
-  /* min-height: 200px; */
+  padding-left: 25px;
 }
-#sidebar1 li{
-}
-
 
 
 #sidebar1 li a:hover,
@@ -734,21 +723,26 @@ background: url(../images/arrow.gif) no-repeat left center;
   color: #FF9F00;
 }
 
-#sidebar1 li a:focus,
-#sidebar1 li a:active{
-  background: url(../images/arrow.gif) no-repeat left center;
-}
-#mainContent ul {
-margin:0;
-padding:0;
-list-style: none;
-}
-#mainContent li {
-background: url(../images/arrow.gif) no-repeat left;
-/* center;  */
-padding-left: 15px;
 
-} 
+#sidebar1 li a:focus,
+#sidebar1 li a:active {
+  background-image: url(../images/arrow.gif);
+  background-repeat: no-repeat;
+  background-position: center left;
+  
+}
+
+#mainContent ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#mainContent li a:focus{
+  background: url(../images/arrow.gif) no-repeat 4 center;
+  padding-left: 18px;
+
+}
 
 #sidebar1 ul {
   font-size: 105%;
@@ -758,34 +752,33 @@ padding-left: 15px;
   padding: 0px;
   list-style: none;
 }
-#sidebar1 p, #sidebar1 h3 {
+
+#sidebar1 p,
+#sidebar1 h3 {
   padding-right: 20px;
   padding-left: 20px;
 }
-#sidebar1 li{
-  text-align: center;
-}
+
+
 #sidebar1 li a {
   color: #FFF;
   text-decoration: none;
   display: block;
-  /* padding: 5px 0px 5px 40px; */
-  padding: 5px 0px 5px 0px;
+  /* padding: 5px 0px 5px 0px; */
 }
 
 #sidebar2 img {
-  width:45%;
+  width: 45%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 #sidebar2 {
   padding: 15px 0;
   background-repeat: no-repeat;
   background-position: right top;
   min-height: 145px;
-  border-color: #1EAEDB;
-  border: solid 2px;
 
 
 }
@@ -836,6 +829,10 @@ padding-left: 15px;
 #footer li a:focus {
   color: #FF9F00;
 }
+.footer-container  {
+    padding: 0;
+    margin: 0;
+  }
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -848,9 +845,7 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {
-
-}
+@media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
@@ -858,27 +853,34 @@ there.
     width: auto;
     padding: 8px 12px;
   }
+
   #sidebar1 {
     background: url(../images/side1_back.jpg) no-repeat right top;
   }
-#sidebar1 li a {
-  padding: 5px 0px 5px 0px;
-}
-#sidebar2 img {
-  width:60%;
-  display:inline-block;
-}
-#sidebar2 {
-  background: url(../images/side2_back.jpg) no-repeat right top;
-}
-#header img{
-  margin: 30px 0 31px 40px;
-  width: auto;
-}
-#mainContent {
-  background: url(../images/content_back.jpg) no-repeat right top;
-  text-align: left;
-}
+
+  #sidebar1 li a {
+    padding: 5px 0px 5px 0px;
+  }
+
+  #sidebar2 img {
+    width: 60%;
+    display: inline-block;
+  }
+
+  #sidebar2 {
+    background: url(../images/side2_back.jpg) no-repeat right top;
+  }
+
+  #header img {
+    margin: 30px 0 31px 40px;
+    width: auto;
+  }
+
+  #mainContent {
+    background: url(../images/content_back.jpg) no-repeat right top;
+    text-align: left;
+  }
+
   #header li {
     width: auto;
   }
@@ -892,7 +894,7 @@ there.
   }
 
   #header ul {
-    width:100%;
+    width: 100%;
     padding: 0 0 0 20px;
   }
 
@@ -901,28 +903,44 @@ there.
     text-align: left;
   }
 
+  /* Left-align sidebar1 items on tablet+ */
+  #sidebar1 li {
+    text-align: left;
+  }
+
+  #sidebar1 li a {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+  }
 
 }
 
 /* Larger than desktop */
 @media (min-width: 1150px) {
-#mainContent {
-  padding-right: 100px;
-}
+  #mainContent {
+    padding-right: 100px;
+  }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
 /* Right sidebar margin (space to its left, adjust as needed) */
-#sidebar2 {
-  /* margin-left: 20px;  */
-  /* adds visual gap from mainContent */
-}
 
 /*Nothing else seemed to work, so I ended up with this*/
 @media (max-width: 549.98px) {
-  #sidebar1 p, #sidebar1 h3 {
+
+  #sidebar1 p,
+  #sidebar1 h3 {
     padding-left: 0;
-    padding-right: 0; 
+    padding-right: 0;
   }
+
+#footer li a, #footer li{
+  padding: 0;
+}
+#sidebar1 li {
+  text-align: center;
+}
 }
