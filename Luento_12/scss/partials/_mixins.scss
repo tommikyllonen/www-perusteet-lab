@@ -1,0 +1,6 @@
+@mixin bs($bs-type: border-box){// bs = box-sizing // default value is border-box
+    -webkit-box-sizing: $bs-type;
+    -moz-box-sizing: $bs-type;
+    -ms-box-sizing: $bs-type;
+    box-sizing: $bs-type;    
+}
