@@ -1,0 +1,130 @@
+@import "partials/variables";
+@import "partials/mixins";
+* {
+    @include bs(content-box);
+}
+.demo {
+    color: $color7;
+}
+
+
+a {
+    color: $color7;
+    &:hover, &:focus {
+        color: $color5; // this nests to a:hover, a:focus {
+    }
+    &:visited, &:active {
+        color: $color1; // this nests to a:visited, a:active {
+    }
+}
+
+.main {
+    .content {
+        width:70%; // this nests, like so: .main .content{
+    }
+    .content &  {
+        width:100%; // this flips, like so: .content .main{
+    }
+    .content &  {
+        .level_3 & {
+        width:50%; // this will be: .level_3 .content .main{
+        }
+    }
+}
+
+.main {
+    &.content {
+        color: $color3; // this nests to .main.content {
+    }
+}
+
+// Placeholder selector aka you can inherit this class
+%box { 
+    padding: 2em;
+    color: $color10;
+    background-color: $color11;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.warning-box {
+    @extend %box;
+    border: 4px dotted $color1;
+}
+.success-box {
+    @extend %box;
+    border: 4px dotted $color4;
+}
+.info-box {
+    @extend %box;
+    border: 4px dotted $color7;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+%box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px
+}
+$primary-color: $color4;
+.div1 {
+    @extend %box;
+    background-color: $color4;
+}
+.div2 {
+    @extend %box;
+    background-color: lighten($color4, 25%);
+}
+.div3 {
+    @extend %box;
+    background-color: darken($color4, 25%);
+}
+.div4 {
+    @extend %box;
+    background-color: $color5;
+}
+.div5 {
+    @extend %box;
+    background-color: complement($color5);//complement is the opposite color
+}
+.div6 {
+    @extend %box;
+    background-color: $color8;
+}
+.div7 {
+    @extend %box;
+    background-color: adjust-hue($color8,120deg);
+}
+.div8 {
+    @extend %box;
+    background-color: adjust-hue($color8,240deg);
+}
+
+.div9 {
+    @extend %box;
+    background-color: transparentize($color8, 0.5);// transparentize makes color 50% transparent (fade-out) is the same function!!!
+}
+.div10 {
+    @extend %box;
+    background-color: mix($color8, $color1, 25%);// mix mixes two colors together, here 25% of color1 is mixed into color8
+}
+
+
+@for $i from 1 through 10 {
+  .item_#{$i} {
+    background-image: image-url("svg/img_#{$i}.svg");
+    .no-svg & {
+      background-image: image-url("png/img_#{$i}.png");
+    }
+  }
+}
+
+
+
+
+
