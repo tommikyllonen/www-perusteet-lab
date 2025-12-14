@@ -1,0 +1,38 @@
+[
+  {
+    "file": "1.form-img.png",
+    "title": "Form Showcase",
+    "alt": "Form project screenshot",
+    "url": "https://example.com/form-project"
+  },
+  {
+    "file": "2.fixed-img.png",
+    "title": "Fixed Layout",
+    "alt": "Fixed layout project screenshot",
+    "url": "https://example.com/fixed-layout"
+  },
+  {
+    "file": "3.Horticulture-img.png",
+    "title": "Horticulture Site",
+    "alt": "Horticulture website screenshot",
+    "url": "https://example.com/horticulture"
+  },
+  {
+    "file": "4.Pleasantville-img.png",
+    "title": "Pleasantville",
+    "alt": "Pleasantville website screenshot",
+    "url": "https://example.com/pleasantville"
+  },
+  {
+    "file": "5.pleasantville-responsive-img.png",
+    "title": "Pleasantville (Responsive)",
+    "alt": "Pleasantville responsive website screenshot",
+    "url": "https://example.com/pleasantville-responsive"
+  },
+  {
+    "file": "6.gardening-img.png",
+    "title": "Gardening",
+    "alt": "Gardening website screenshot",
+    "url": "https://example.com/gardening"
+  }
+]
