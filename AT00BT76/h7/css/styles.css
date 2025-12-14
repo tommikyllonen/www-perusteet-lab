@@ -1,4 +1,149 @@
-#imageContainer {
-  width: 150px;
-  margin: 30px auto;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+header{
+    background: linear-gradient(90deg, #0A1F33 0%, #112233 100%);
+    display:flex;
+    flex: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: end;
+    border-bottom: #00BFFF solid 1px;
+
+}
+/* Links */
+header a {
+  color: gray;
+  padding: 12px 10px;
+
+  text-decoration: none;
+  /* display: block; */
+}
+header a:hover {
+  color: #f1f1f1;
+}
+
+
+
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-image: url("../images/bg-image2.png");
+    background-size: 50%;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+footer {
+    /* color: gray; */
+    display:flex;
+    flex: 0;
+    border-top: #00BFFF solid 1px;
+    background: linear-gradient(90deg, #0A1F33 0%, #112233 100%);
+    padding: 10px;
+    text-align: center;
+    justify-content: end;
+    font-size: 12px;
+}
+
+/* School Projects */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-gallery img{
+  width: 100%;
+  height: auto; /* Keep aspect ratio on narrow screens */
+  /* max-width: 47vw; */
+  border-radius: 8.2px;
+  }
+  .project-gallery a {
+    /* max-width: 47vw; */
+    border: 2px solid #00BFFF;
+    box-shadow: 5px 5px 20px rgba(0, 191, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* center image if smaller */
+    justify-content: center;
+}
+
+.project-gallery .link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.link-container div {
+    margin-bottom: 8px;
+    /* color: rgb(185, 179, 179);#00BFFF */
+    color: #00BFFF;
+    font-weight: bold;
+}
+
+/* Make work on small screens */
+@media (max-width: 768px) {
+  .project-gallery a,
+  .project-gallery img {
+    max-width: 100%;
+  }
+}
+.cv-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+.cv-container img {
+    /* border: 2px solid black; */
+    /* border-top: 1px solid black; */
+    max-width: 100vw;
+    height: auto;
+    /* background-color: #333741; */
+  border: 1px solid #00BFFF;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 191, 255, 0.3);
+}
+
+
+/* About me */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+.about-me {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px 30px;
+  background: rgba(10, 31, 51, 0.85); 
+  border: 1px solid #00BFFF;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 191, 255, 0.3);
+}
+
+.about-me h1 {
+  font-size: 2rem;
+  color: #00BFFF;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cfd8dc;
 }

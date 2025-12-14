@@ -1,0 +1,90 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+header{
+    display:flex;
+    flex: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: end;
+    background: #333741;
+    font-size: 24px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+
+}
+
+/* Links */
+header a {
+  color: gray;
+  padding: 12px 16px;
+
+  text-decoration: none;
+  /* display: block; */
+}
+header a:hover {
+  color: #f1f1f1;
+}
+
+header a.active {
+  color: #922222;
+}
+
+
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+footer {
+    color: gray;
+    display:flex;
+    flex: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    justify-content: end;
+    font-size: 12px;
+    background: #333741;
+}
+
+/* School Projects */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-gallery img{
+  height: 60vh;
+  max-width: 47vw;
+  border-radius: 8.2px;
+  /* width:auto; */
+    /* border: 2px solid #ccc; */
+  }
+  .project-gallery a {
+    height: 60vh;
+    max-width: 47vw;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+}
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: #333741;
+    margin-bottom: 10px;
+}
+.link-container div {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
